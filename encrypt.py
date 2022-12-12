@@ -35,4 +35,20 @@ for symbol in message:
         if mode == "encrypt":
             num = num + key
         elif mode == "decrypt":  
+            num = num - key 
+
+        if num >= len(SYMBOLS):
+            num = num - len(SYMBOLS)   
+        elif num < 0:
+            num = num + len(SYMBOLS)   
+        translated = translated + SYMBOLS[num] 
+    else:
+        translated = translated + symbol
+
+
+print(translated)
+
+try:
+    pyperclip.copy(translated)
+    print("Full {}ed text copied to clipboard.".format)
   
