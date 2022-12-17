@@ -1,4 +1,5 @@
-import pyperclip
+try: 
+   import pyperclip
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 while True:
